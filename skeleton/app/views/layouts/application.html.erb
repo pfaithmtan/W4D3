@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <h1> <% if logged_in?  %>
+            <%= current_user  %> 
+          <% end %>
+          
+          <% if logged_in? %>
+            <label name="" type="submit" value="<% logout! %>">Logout</label>
+          <% else %>
+            <!-- <label name="" type="submit" value="<#% login!(@current_user) %>">Login</label> -->
+          <% end %>
+    </h1>
     <title>NinetyNineCats</title>
     <%= csrf_meta_tags %>
 
